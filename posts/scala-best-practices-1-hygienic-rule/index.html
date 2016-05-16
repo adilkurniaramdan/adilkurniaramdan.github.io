@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# website: http://ogp.me/ns/website#">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="">
+    <meta property="og:title" content="Scala best practices: 1 Hygienic Rule">
+    
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2016-05-16">
+    
+    <meta property="og:description" content="">
+    <meta property="og:url" content="https://adilkurniaramdan.github.io/posts/scala-best-practices-1-hygienic-rule/">
+    <meta property="og:site_name" content="adilkurniaramdan.github.io">
+    
+    <meta name="generator" content="Hugo 0.15" />
+    <title>Scala best practices: 1 Hygienic Rule &middot; adilkurniaramdan.github.io</title>
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="https://adilkurniaramdan.github.io/css/style.css">
+    <link href="" rel="alternate" type="application/rss+xml" title="adilkurniaramdan.github.io" />
+
+    
+    
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top visible-xs">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			
+				<a class="navbar-brand" href="https://adilkurniaramdan.github.io/">Adil D Ramdan</a>
+			
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				
+				
+					<li><a href="https://adilkurniaramdan.github.io/about/">About</a></li>
+				
+					<li><a href="https://adilkurniaramdan.github.io/posts/">Blog</a></li>
+				
+					<li><a href="https://adilkurniaramdan.github.io/tutorial/">Tutorials</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</nav>
+<div class="container-fluid">
+	<div class="row">
+		<div id="menu" class="hidden-xs col-sm-4 col-md-3">
+	<div id="menu-content" class="vertical-align">
+		
+			<h2 class="text-center"><a href="https://adilkurniaramdan.github.io/">Adil D Ramdan</a></h2>
+		
+		
+		
+			<small class="text-center center-block">Talk is cheap, show me the code</small>
+		
+		
+		
+			<img id="profile-pic" src="https://adilkurniaramdan.github.io//img/logo.jpg" alt="My Picture" class="img-circle center-block">
+		
+		<div id="social" class="text-center">
+			<a href="https://twitter.com/SoeHokBiel"><i class="fa fa-twitter fa-2x"></i></a>
+			<a href="https://id.linkedin.com/in/adilramdan"><i class="fa fa-linkedin fa-2x"></i></a>
+			<a href="https://github.com/adilkurniaramdan"><i class="fa fa-github fa-2x"></i></a>
+			<a href="mailto:adil.ramdan@gmail.com"><i class="fa fa-envelope-o fa-2x"></i></a>
+		</div>
+		<div id="links" class="text-center">
+			
+			
+				<a href="https://adilkurniaramdan.github.io/about/">About</a>
+			
+				<a href="https://adilkurniaramdan.github.io/posts/">Blog</a>
+			
+				<a href="https://adilkurniaramdan.github.io/tutorial/">Tutorials</a>
+			
+		</div>
+	</div>
+</div>
+		<div id="content" class="col-xs-12 col-sm-8 col-md-9">
+			<div class="row">
+				<div id="post" class="col-sm-offset-1 col-sm-10 col-md-10 col-lg-10">
+
+<main>
+	<header>
+		<h1>Scala best practices: 1 Hygienic Rule</h1>
+	</header>
+
+	<article>
+		
+
+<p><a href="https://github.com/adilkurniaramdan/scala-best-practices">Source</a></p>
+
+<h2 id="1-hygienic-rules:f4554f6c2b292e5c4221f556e7e379c9">1. Hygienic Rules</h2>
+
+<p><img src="https://raw.githubusercontent.com/monifu/scala-best-practices/master/assets/scala-logo-256.png"  align="right" width="128" height="128" /></p>
+
+<p>These are general purpose hygienic rules that transcend the language
+or platform rules. Programming language is a form of communication,
+targeting computer systems, but also your colleagues and your future
+self, so respecting these rules is just like washing your hands after
+going to the bathroom.</p>
+
+<h3 id="1-1-should-enforce-a-reasonable-line-length:f4554f6c2b292e5c4221f556e7e379c9">1.1. SHOULD enforce a reasonable line length</h3>
+
+<p>There&rsquo;s a whole science on typography which says that people lose
+their focus when the line of text is too wide, a long line makes it
+difficult to gauge where the line starts or ends and it makes it
+difficult to continue on the next line below it, as your eyes have to
+move a lot from the right to the left. It also makes it difficult to
+scan for important details.</p>
+
+<p>In typography, the optimal line length is considered to be somewhere
+between 50 and 70 chars.</p>
+
+<p>In programming, we&rsquo;ve got indentation, so it&rsquo;s not feasible to impose
+a 60 chars length for lines. 80 chars is usually acceptable, but not
+in Scala, because in Scala we use a lot of closures and if you want
+long and descriptive names for functions and classes, well, 80 chars
+is way too short.</p>
+
+<p>120 chars, as IntelliJ IDEA is configured by default, may be too wide
+on the other hand.  Yes, I know that we&rsquo;ve got 16:9 wide monitors, but
+this doesn&rsquo;t help readability and with shorter lines we can put these
+wide monitors to good use when doing side-by-side diffs. And with long
+lines it takes effort to notice important details that happen at the
+end of those lines.</p>
+
+<p>So as a balance:</p>
+
+<ul>
+<li>strive for 80 chars as the soft limit and if it gets ugly,</li>
+<li>then 100 chars is enough, except for &hellip;</li>
+<li>function signatures, which can get really ugly if limited</li>
+</ul>
+
+<p>On the other hand, anything that goes beyond 120 chars is an abomination.</p>
+
+<h3 id="1-2-must-not-rely-on-a-sbt-or-ide-plugin-to-do-the-formatting-for-you:f4554f6c2b292e5c4221f556e7e379c9">1.2. MUST NOT rely on a SBT or IDE plugin to do the formatting for you</h3>
+
+<p>IDEs and SBT plugins can be of great help, however if you&rsquo;re thinking
+about using one to automatically format your code, beware.</p>
+
+<p>You won’t find a plugin that is able to infer the developer’s intent,
+since that requires a human-like understanding of the code and would be
+near impossible to make. The purpose of proper indentation and formatting
+isn&rsquo;t to follow some rigid rules set upon you in a cargo-cult way, but to
+make the code more logical, more readable, more
+approachable. Indentation is actually an art form, which is not awful
+since all you need is a nose for awful code and the urge of fixing
+it. And it is in the developer&rsquo;s job description to make sure that his
+code doesn&rsquo;t stink.</p>
+
+<p>So automated means are fine, BUT BE CAREFUL to not ruin other people&rsquo;s
+carefully formatted code, otherwise I&rsquo;ll slap you in prose.</p>
+
+<p>Lets think about what I said - if the line is too long, how is a
+plugin supposed to break it? Lets talk about this line (real code):</p>
+
+<pre><code class="language-scala">    val dp = new DispatchPlan(new Set(filteredAssets), start = startDate, end = endDate, product, scheduleMap, availabilityMap, Set(activationIntervals.get), contractRepository, priceRepository)
+</code></pre>
+
+<p>In most cases, a plugin will just do truncation and I&rsquo;ve seen a lot of these in practice:</p>
+
+<pre><code class="language-scala">    val dp = new DispatchPlan(Set(filteredAssets), start =
+      startDate, end = endDate, product, scheduleMap, availabilityMap,
+      Set(activationIntervals), contractRepository, priceRepository)
+</code></pre>
+
+<p>Now that&rsquo;s not readable, is it? I mean, seriously, that looks like
+barf. And that&rsquo;s exactly the kind of output I see coming from people
+relying on plugins to work. We could also have this version:</p>
+
+<pre><code class="language-scala">    val dp = new DispatchPlan(
+      Set(filteredAssets),
+      startDate,
+      endDate,
+      product,
+      scheduleMap,
+      availabilityMap,
+      Set(activationIntervals),
+      contractRepository,
+      priceRepository
+    )
+</code></pre>
+
+<p>Looks much better. But truth is, this isn&rsquo;t so good in other
+instances. Like say we&rsquo;ve got a line that we want to break:</p>
+
+<pre><code class="language-scala">   val result = service.something(param1, param2, param3, param4).map(transform)
+</code></pre>
+
+<p>Now placing those parameters on their own line is awful, no matter how you deal with it:</p>
+
+<pre><code class="language-scala">    // awful because that transform call is not visible
+    val result = service.something(
+      param1,
+      param2,
+      param3,
+      param4).map(transform)
+
+    // awful because it breaks the logical flow
+    val result = service.something(
+      param1,
+      param2,
+      param3,
+      param4
+    ).map(transform)
+</code></pre>
+
+<p>This would be much better:</p>
+
+<pre><code class="language-scala">    val result = service
+      .something(param1, param2, param3, param4)
+      .map(transform)
+</code></pre>
+
+<p>Now that&rsquo;s better, isn&rsquo;t it? Of course, sometimes that call is so long
+that this doesn&rsquo;t cut it. So you need to resort to a temporary value
+of some sort, e.g&hellip;</p>
+
+<pre><code class="language-scala">    val result = {
+      val instance =
+        object.something(
+          myAwesomeParam1,
+          otherParam2,
+          someSeriousParam3,
+          anEvenMoreSoParam4,
+          lonelyParam5,
+          catchSomeFn6,
+          startDate7
+        )
+
+      for (x &lt;- instance) yield
+        transform(x)
+    }
+</code></pre>
+
+<p>Of course, sometimes if the code stinks so badly, you need to get into
+refactoring - as in, maybe too many parameters are too much for a
+function ;-)</p>
+
+<p>And we are talking strictly about line lengths - once we get into
+other issues, things get even more complicated. So really, you won&rsquo;t
+find a plugin that does this analysis and that can make the right
+decision for you.</p>
+
+<h3 id="1-3-should-break-long-functions:f4554f6c2b292e5c4221f556e7e379c9">1.3. SHOULD break long functions</h3>
+
+<p>Ideally functions should only be a couple of lines long. If the lines
+get too big, then we need to break them into smaller functions and
+give them a name.</p>
+
+<p>Note that in Scala we don&rsquo;t necessarily have to make such intermediate
+functions available in other scopes, the purpose here is to primarily
+aid readability, so in Scala we can do inner-functions to break logic
+into pieces.</p>
+
+<h3 id="1-4-must-not-introduce-spelling-errors-in-names-and-comments:f4554f6c2b292e5c4221f556e7e379c9">1.4. MUST NOT introduce spelling errors in names and comments</h3>
+
+<p>Spelling errors are freakishly annoying, interrupting a reader&rsquo;s flow.
+Use a spell-checker. Intelligent IDEs have built-in
+spell-checkers. Note the underlined spelling warnings and fix them.</p>
+
+<h3 id="1-5-names-must-be-meaningful:f4554f6c2b292e5c4221f556e7e379c9">1.5. Names MUST be meaningful</h3>
+
+<p><em>&ldquo;There are only two hard things in Computer Science: cache
+invalidation and naming things.&rdquo;</em> &ndash; Phil Karlton</p>
+
+<p>We&rsquo;ve got three guidelines here:</p>
+
+<ol>
+<li>give descriptive names, but don&rsquo;t go overboard, four words is a
+little too much already</li>
+<li>you can be terse in naming if the type / purpose can be easily
+inferred from the immediate context, or if there&rsquo;s already an
+established convention</li>
+<li>if going the descriptive route, don&rsquo;t do bullshit words that are
+meaningless</li>
+</ol>
+
+<p>For example this is acceptable:</p>
+
+<pre><code class="language-scala">for (p &lt;- people) yield
+  transformed(p)
+</code></pre>
+
+<p>We can see that <code>p</code> is a person from the immediate context, so a short
+one letter name is OK. This is also acceptable because <code>i</code> is an
+established convention to use as an index:</p>
+
+<pre><code class="language-scala">for (i &lt;- 0 until limit) yield ???
+</code></pre>
+
+<p>This is in general not acceptable, because usually with tuples the
+naming of the collection doesn&rsquo;t reflect well what&rsquo;s contained (if you
+haven&rsquo;t given those elements a name, then as a consequence the
+collection itself is going to have a bad name):</p>
+
+<pre><code>someCollection.map(_._2)
+</code></pre>
+
+<p>Implicit parameters on the other hand are OK with short names, because
+being passed implicitly, we don&rsquo;t care about them unless they are
+missing:</p>
+
+<pre><code class="language-scala">def query(id: Long)(implicit ec: ExecutionContext, c: WSClient): Future[Response]
+</code></pre>
+
+<p>This is not acceptable because the name is utterly meaningless, even
+if there&rsquo;s a clear attempt at being descriptive:</p>
+
+<pre><code class="language-scala">def processItems(people: Seq[Person]) = ???
+</code></pre>
+
+<p>It&rsquo;s not acceptable because the naming of this function indicates a
+side-effect (<code>process</code> is a verb indicating a command), yet it doesn&rsquo;t
+describe what we are doing with those <code>people</code>. The <code>Items</code> suffix is
+meaningless, because we might have said <code>processThingy</code>,
+<code>processRows</code>, <code>processStuff</code> and it would still say exactly the same
+thing - absolutely nothing. It also increases visual clutter, as more
+words is more text to read and meaningless words are just noise.</p>
+
+<p>Properly chosen descriptive names - good. Bullshit names - bad.</p>
+
+	</article>
+</main>
+
+<div id="bottom-nav" class="text-center center-block">
+	<a href=" https://adilkurniaramdan.github.io/" class="btn btn-default"><i class="fa fa-home"></i> Home</a>
+</div>
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'adilkurniaramdan.github.io';
+    var disqus_identifier = 'https:\/\/adilkurniaramdan.github.io\/posts\/scala-best-practices-1-hygienic-rule\/';
+    var disqus_title = 'Scala best practices: 1 Hygienic Rule';
+    var disqus_url = 'https:\/\/adilkurniaramdan.github.io\/posts\/scala-best-practices-1-hygienic-rule\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+  </div>
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'SHORT-CODE-HERE', 'auto');
+    ga('send', 'pageview');
+    window.baseURL = "https:\/\/adilkurniaramdan.github.io\/";
+  </script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+  
+  
+  <script src="https://adilkurniaramdan.github.io//js/App.js"></script>
+  
+</body>
+</html>

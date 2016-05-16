@@ -2,13 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://adilkurniaramdan.github.io/</loc>
-    <lastmod>2016-05-16T11:12:06+07:00</lastmod>
+    <loc>https://adilkurniaramdan.github.io/</loc>
+    <lastmod>2016-05-16T16:46:41+07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://adilkurniaramdan.github.io/posts/hugo-cheat-sheet/</loc>
+    <loc>https://adilkurniaramdan.github.io/posts/scala-best-practices-1-hygienic-rule/</loc>
+    <lastmod>2016-05-16T16:46:41+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://adilkurniaramdan.github.io/posts/hugo-cheat-sheet/</loc>
     <lastmod>2016-05-16T11:12:06+07:00</lastmod>
   </url>
   
