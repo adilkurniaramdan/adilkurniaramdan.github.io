@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>adilkurniaramdan.github.io</title>
-    <link>https://base-url-here/</link>
+    <link>http://adilkurniaramdan.github.io/</link>
     <description>Recent content on adilkurniaramdan.github.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://base-url-here/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://adilkurniaramdan.github.io/index.xml" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>
