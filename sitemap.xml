@@ -3,7 +3,13 @@
   
   <url>
     <loc>http://adilkurniaramdan.github.io/</loc>
+    <lastmod>2016-05-16T11:12:06+07:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://adilkurniaramdan.github.io/posts/hugo-cheat-sheet/</loc>
+    <lastmod>2016-05-16T11:12:06+07:00</lastmod>
   </url>
   
 </urlset>
