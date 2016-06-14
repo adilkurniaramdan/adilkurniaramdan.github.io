@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# website: http://ogp.me/ns/website#">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="">
+    <meta property="og:title" content="scala interview questions">
+    
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2016-06-14">
+    
+    <meta property="og:description" content="">
+    <meta property="og:url" content="https://adilkurniaramdan.github.io/post/scala-interview-questions/">
+    <meta property="og:site_name" content="adilkurniaramdan.github.io">
+    
+    <meta name="generator" content="Hugo 0.15" />
+    <title>scala interview questions &middot; adilkurniaramdan.github.io</title>
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="https://adilkurniaramdan.github.io/css/style.css">
+    <link href="" rel="alternate" type="application/rss+xml" title="adilkurniaramdan.github.io" />
+
+    
+    
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top visible-xs">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			
+				<a class="navbar-brand" href="https://adilkurniaramdan.github.io/">Adil D Ramdan</a>
+			
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				
+				
+					<li><a href="https://adilkurniaramdan.github.io/about/">About</a></li>
+				
+					<li><a href="https://adilkurniaramdan.github.io/post/">Blog</a></li>
+				
+					<li><a href="https://adilkurniaramdan.github.io/tutorial/">Tutorials</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</nav>
+<div class="container-fluid">
+	<div class="row">
+		<div id="menu" class="hidden-xs col-sm-4 col-md-3">
+	<div id="menu-content" class="vertical-align">
+		
+			<h2 class="text-center"><a href="https://adilkurniaramdan.github.io/">Adil D Ramdan</a></h2>
+		
+		
+		
+			<small class="text-center center-block">Talk is cheap, show me the code</small>
+		
+		
+		
+			<img id="profile-pic" src="https://adilkurniaramdan.github.io//img/logo.jpg" alt="My Picture" class="img-circle center-block">
+		
+		<div id="social" class="text-center">
+			<a href="https://twitter.com/SoeHokBiel"><i class="fa fa-twitter fa-2x"></i></a>
+			<a href="https://id.linkedin.com/in/adilramdan"><i class="fa fa-linkedin fa-2x"></i></a>
+			<a href="https://github.com/adilkurniaramdan"><i class="fa fa-github fa-2x"></i></a>
+			<a href="mailto:adil.ramdan@gmail.com"><i class="fa fa-envelope-o fa-2x"></i></a>
+		</div>
+		<div id="links" class="text-center">
+			
+			
+				<a href="https://adilkurniaramdan.github.io/about/">About</a>
+			
+				<a href="https://adilkurniaramdan.github.io/post/">Blog</a>
+			
+				<a href="https://adilkurniaramdan.github.io/tutorial/">Tutorials</a>
+			
+		</div>
+	</div>
+</div>
+		<div id="content" class="col-xs-12 col-sm-8 col-md-9">
+			<div class="row">
+				<div id="post" class="col-sm-offset-1 col-sm-10 col-md-10 col-lg-10">
+
+<main>
+	<header>
+		<h1>scala interview questions</h1>
+	</header>
+
+	<article>
+		
+
+<p>#Scala Job Interview Questions</p>
+
+<p>This file contains a number of Scala interview questions that can be used when vetting potential candidates. It is by no means recommended to use every single question here on the same candidate (that would take hours). Choosing a few items from this list should help you vet the intended skills you require.</p>
+
+<p><strong>Note:</strong> Keep in mind that many of these questions are open-ended and could lead to interesting discussions that tell you more about the person&rsquo;s capabilities than a straight answer would.</p>
+
+<h2 id="table-of-contents:f1e7f679bd0c9d8278a47f4ac8c02912">Table of Contents</h2>
+
+<ol>
+<li><a href="#general-questions">General Questions</a></li>
+<li><a href="#language-questions">Language Questions</a></li>
+<li><a href="#functional-programming-questions">Functional Programming Questions</a></li>
+<li><a href="#reactive-programming-questions">Reactive Programming Questions</a></li>
+<li><a href="#coding-questions">Coding Questions</a></li>
+<li><a href="#fun-questions">Fun Questions</a></li>
+</ol>
+
+<h2 id="getting-involved:f1e7f679bd0c9d8278a47f4ac8c02912">Getting Involved</h2>
+
+<ol>
+<li><a href="#contributors">Contributors</a></li>
+<li><a href="https://github.com/jarlakxen/Scala-Interview-Questions/blob/master/CONTRIBUTING.md">How to Contribute</a></li>
+<li><a href="https://github.com/jarlakxen/Scala-Interview-Questions/blob/master/LICENSE.md">License</a></li>
+</ol>
+
+<h4 id="general-questions:f1e7f679bd0c9d8278a47f4ac8c02912">General Questions:</h4>
+
+<ul>
+<li>What did you learn yesterday/this week?</li>
+<li>Why and how did you start learning Scala?</li>
+<li>What excites or interests you about coding in Scala?</li>
+<li>What is a recent technical challenge you experienced and how did you solve it?</li>
+<li>Talk about your preferred development environment. (OS, Editor or IDE, Tools, etc.)</li>
+<li>What are your thoughts about the other JVM languages compared to Scala?</li>
+<li>Do you think that the Scala language and community is mature enough?</li>
+</ul>
+
+<h4 id="language-questions:f1e7f679bd0c9d8278a47f4ac8c02912">Language Questions:</h4>
+
+<ul>
+<li>What is the difference between a <code>var</code>, a <code>val</code> and <code>def</code>?</li>
+<li>What is the difference between a <code>trait</code> and an <code>abstract class</code>?</li>
+<li>What is the difference between an <code>object</code> and a <code>class</code>?</li>
+<li>What is a <code>case class</code>?</li>
+<li>What is the difference between a Java future and a Scala future?</li>
+<li>What is the difference between <code>unapply</code> and <code>apply</code>, when would you use them?</li>
+<li>What is a companion object?</li>
+<li>What is the difference between the following terms and types in Scala: <code>Nil</code>, <code>Null</code>, <code>None</code>, <code>Nothing</code>?</li>
+<li>What is <code>Unit</code>?</li>
+<li>What is the difference between a <code>call-by-value</code> and <code>call-by-name</code> parameter?
+
+<ul>
+<li>How does Scala&rsquo;s <code>Stream</code> trait levarages <code>call-by-name</code>?</li>
+</ul></li>
+<li>Define uses for the <code>Option</code> monad and good practices it provides.</li>
+<li>How does <code>yield</code> work?</li>
+<li>Explain the implicit parameter precedence.</li>
+<li>What operations is a <code>for comprehension</code> syntactic sugar for?</li>
+<li>Streams:
+
+<ul>
+<li>What consideration you need to have when you use Scala&rsquo;s <code>Streams</code>?</li>
+<li>What technique does the Scala&rsquo;s <code>Streams</code> use internally?</li>
+</ul></li>
+</ul>
+
+<h4 id="functional-programming-questions:f1e7f679bd0c9d8278a47f4ac8c02912">Functional Programming Questions:</h4>
+
+<ul>
+<li>What is a <code>functor</code>?</li>
+<li>What is a <code>applicative</code>?</li>
+<li>What is a <code>monad</code>?
+
+<ul>
+<li>What are the <code>monad</code> axioms?</li>
+<li>What Scala data types are, or behave like, monads?</li>
+<li>What are the basic and optional requirement/s to conform a Monad?</li>
+</ul></li>
+<li>Explain higher order functions.</li>
+<li>What is gained from using immutable objects?</li>
+<li>What is tail recursion?
+
+<ul>
+<li>How does it differentiate from common recursion?</li>
+<li>What issues are there with tail recursive functions in the JVM?</li>
+<li>How does the Scala compiler optimize a tail recursive function?</li>
+<li>How do you ensure that the compiler optimizes the tail recursive function?</li>
+</ul></li>
+<li>What is function currying?</li>
+<li>What are implicit parameters?</li>
+<li>What are typeclasses?</li>
+<li>What are lenses?</li>
+<li>What is and which are the uses of: Enumerators, Enumeratees and Iteratee</li>
+</ul>
+
+<h4 id="reactive-programming-questions:f1e7f679bd0c9d8278a47f4ac8c02912">Reactive Programming Questions:</h4>
+
+<ul>
+<li>Explain the actor model.</li>
+<li>What are benefits of non-blocking (asynchronous I/O) over blocking (synchronous I/O).</li>
+<li>Do you think that Scala has the same async spirit as Node.js?</li>
+<li>Explain the difference between <code>concurrency</code> and <code>parallelism</code>, and name some constructs you can use in Scala to leverage both.</li>
+<li>What is the global ExecutionContext?
+
+<ul>
+<li>What does the global ExecutionContext underlay?</li>
+</ul></li>
+<li>Akka:
+
+<ul>
+<li>Which are the 3 main components in a Stream?</li>
+</ul></li>
+</ul>
+
+<h4 id="coding-questions:f1e7f679bd0c9d8278a47f4ac8c02912">Coding Questions:</h4>
+
+<ul>
+<li>How can you make a <code>List[String]</code> from a <code>List[List[String]]</code>?</li>
+<li>What is the difference (if any) between these 2 statements?
+<code>scala
+var x = immutable.Set[Int]()
+val y = mutable.Set[Int]()
+</code></li>
+</ul>
+
+<h4 id="fun-questions:f1e7f679bd0c9d8278a47f4ac8c02912">Fun Questions:</h4>
+
+<ul>
+<li>What&rsquo;s a cool project that you&rsquo;ve recently worked on?</li>
+<li>What testing framework for Scala do you use?</li>
+<li>What do you know about property based testing frameworks, such as Scalacheck?</li>
+<li>Do you like ‘scalaz‘?</li>
+</ul>
+
+	</article>
+</main>
+
+<div id="bottom-nav" class="text-center center-block">
+	<a href=" https://adilkurniaramdan.github.io/" class="btn btn-default"><i class="fa fa-home"></i> Home</a>
+</div>
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'adilkurniaramdan.github.io';
+    var disqus_identifier = 'https:\/\/adilkurniaramdan.github.io\/post\/scala-interview-questions\/';
+    var disqus_title = 'scala interview questions';
+    var disqus_url = 'https:\/\/adilkurniaramdan.github.io\/post\/scala-interview-questions\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+  </div>
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'SHORT-CODE-HERE', 'auto');
+    ga('send', 'pageview');
+    window.baseURL = "https:\/\/adilkurniaramdan.github.io\/";
+  </script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+  
+  
+  <script src="https://adilkurniaramdan.github.io//js/App.js"></script>
+  
+</body>
+</html>

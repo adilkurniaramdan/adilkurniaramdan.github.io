@@ -6,8 +6,152 @@
     <description>Recent content in Posts on adilkurniaramdan.github.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 May 2016 16:46:41 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jun 2016 23:34:34 +0700</lastBuildDate>
     <atom:link href="https://adilkurniaramdan.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>scala interview questions</title>
+      <link>https://adilkurniaramdan.github.io/post/scala-interview-questions/</link>
+      <pubDate>Tue, 14 Jun 2016 23:34:34 +0700</pubDate>
+      
+      <guid>https://adilkurniaramdan.github.io/post/scala-interview-questions/</guid>
+      <description>
+
+&lt;p&gt;#Scala Job Interview Questions&lt;/p&gt;
+
+&lt;p&gt;This file contains a number of Scala interview questions that can be used when vetting potential candidates. It is by no means recommended to use every single question here on the same candidate (that would take hours). Choosing a few items from this list should help you vet the intended skills you require.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Keep in mind that many of these questions are open-ended and could lead to interesting discussions that tell you more about the person&amp;rsquo;s capabilities than a straight answer would.&lt;/p&gt;
+
+&lt;h2 id=&#34;table-of-contents:f1e7f679bd0c9d8278a47f4ac8c02912&#34;&gt;Table of Contents&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;#general-questions&#34;&gt;General Questions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#language-questions&#34;&gt;Language Questions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#functional-programming-questions&#34;&gt;Functional Programming Questions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#reactive-programming-questions&#34;&gt;Reactive Programming Questions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#coding-questions&#34;&gt;Coding Questions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#fun-questions&#34;&gt;Fun Questions&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;getting-involved:f1e7f679bd0c9d8278a47f4ac8c02912&#34;&gt;Getting Involved&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;#contributors&#34;&gt;Contributors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jarlakxen/Scala-Interview-Questions/blob/master/CONTRIBUTING.md&#34;&gt;How to Contribute&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jarlakxen/Scala-Interview-Questions/blob/master/LICENSE.md&#34;&gt;License&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&#34;general-questions:f1e7f679bd0c9d8278a47f4ac8c02912&#34;&gt;General Questions:&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;What did you learn yesterday/this week?&lt;/li&gt;
+&lt;li&gt;Why and how did you start learning Scala?&lt;/li&gt;
+&lt;li&gt;What excites or interests you about coding in Scala?&lt;/li&gt;
+&lt;li&gt;What is a recent technical challenge you experienced and how did you solve it?&lt;/li&gt;
+&lt;li&gt;Talk about your preferred development environment. (OS, Editor or IDE, Tools, etc.)&lt;/li&gt;
+&lt;li&gt;What are your thoughts about the other JVM languages compared to Scala?&lt;/li&gt;
+&lt;li&gt;Do you think that the Scala language and community is mature enough?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;language-questions:f1e7f679bd0c9d8278a47f4ac8c02912&#34;&gt;Language Questions:&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;What is the difference between a &lt;code&gt;var&lt;/code&gt;, a &lt;code&gt;val&lt;/code&gt; and &lt;code&gt;def&lt;/code&gt;?&lt;/li&gt;
+&lt;li&gt;What is the difference between a &lt;code&gt;trait&lt;/code&gt; and an &lt;code&gt;abstract class&lt;/code&gt;?&lt;/li&gt;
+&lt;li&gt;What is the difference between an &lt;code&gt;object&lt;/code&gt; and a &lt;code&gt;class&lt;/code&gt;?&lt;/li&gt;
+&lt;li&gt;What is a &lt;code&gt;case class&lt;/code&gt;?&lt;/li&gt;
+&lt;li&gt;What is the difference between a Java future and a Scala future?&lt;/li&gt;
+&lt;li&gt;What is the difference between &lt;code&gt;unapply&lt;/code&gt; and &lt;code&gt;apply&lt;/code&gt;, when would you use them?&lt;/li&gt;
+&lt;li&gt;What is a companion object?&lt;/li&gt;
+&lt;li&gt;What is the difference between the following terms and types in Scala: &lt;code&gt;Nil&lt;/code&gt;, &lt;code&gt;Null&lt;/code&gt;, &lt;code&gt;None&lt;/code&gt;, &lt;code&gt;Nothing&lt;/code&gt;?&lt;/li&gt;
+&lt;li&gt;What is &lt;code&gt;Unit&lt;/code&gt;?&lt;/li&gt;
+&lt;li&gt;What is the difference between a &lt;code&gt;call-by-value&lt;/code&gt; and &lt;code&gt;call-by-name&lt;/code&gt; parameter?
+
+&lt;ul&gt;
+&lt;li&gt;How does Scala&amp;rsquo;s &lt;code&gt;Stream&lt;/code&gt; trait levarages &lt;code&gt;call-by-name&lt;/code&gt;?&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Define uses for the &lt;code&gt;Option&lt;/code&gt; monad and good practices it provides.&lt;/li&gt;
+&lt;li&gt;How does &lt;code&gt;yield&lt;/code&gt; work?&lt;/li&gt;
+&lt;li&gt;Explain the implicit parameter precedence.&lt;/li&gt;
+&lt;li&gt;What operations is a &lt;code&gt;for comprehension&lt;/code&gt; syntactic sugar for?&lt;/li&gt;
+&lt;li&gt;Streams:
+
+&lt;ul&gt;
+&lt;li&gt;What consideration you need to have when you use Scala&amp;rsquo;s &lt;code&gt;Streams&lt;/code&gt;?&lt;/li&gt;
+&lt;li&gt;What technique does the Scala&amp;rsquo;s &lt;code&gt;Streams&lt;/code&gt; use internally?&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;functional-programming-questions:f1e7f679bd0c9d8278a47f4ac8c02912&#34;&gt;Functional Programming Questions:&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;What is a &lt;code&gt;functor&lt;/code&gt;?&lt;/li&gt;
+&lt;li&gt;What is a &lt;code&gt;applicative&lt;/code&gt;?&lt;/li&gt;
+&lt;li&gt;What is a &lt;code&gt;monad&lt;/code&gt;?
+
+&lt;ul&gt;
+&lt;li&gt;What are the &lt;code&gt;monad&lt;/code&gt; axioms?&lt;/li&gt;
+&lt;li&gt;What Scala data types are, or behave like, monads?&lt;/li&gt;
+&lt;li&gt;What are the basic and optional requirement/s to conform a Monad?&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Explain higher order functions.&lt;/li&gt;
+&lt;li&gt;What is gained from using immutable objects?&lt;/li&gt;
+&lt;li&gt;What is tail recursion?
+
+&lt;ul&gt;
+&lt;li&gt;How does it differentiate from common recursion?&lt;/li&gt;
+&lt;li&gt;What issues are there with tail recursive functions in the JVM?&lt;/li&gt;
+&lt;li&gt;How does the Scala compiler optimize a tail recursive function?&lt;/li&gt;
+&lt;li&gt;How do you ensure that the compiler optimizes the tail recursive function?&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;What is function currying?&lt;/li&gt;
+&lt;li&gt;What are implicit parameters?&lt;/li&gt;
+&lt;li&gt;What are typeclasses?&lt;/li&gt;
+&lt;li&gt;What are lenses?&lt;/li&gt;
+&lt;li&gt;What is and which are the uses of: Enumerators, Enumeratees and Iteratee&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;reactive-programming-questions:f1e7f679bd0c9d8278a47f4ac8c02912&#34;&gt;Reactive Programming Questions:&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Explain the actor model.&lt;/li&gt;
+&lt;li&gt;What are benefits of non-blocking (asynchronous I/O) over blocking (synchronous I/O).&lt;/li&gt;
+&lt;li&gt;Do you think that Scala has the same async spirit as Node.js?&lt;/li&gt;
+&lt;li&gt;Explain the difference between &lt;code&gt;concurrency&lt;/code&gt; and &lt;code&gt;parallelism&lt;/code&gt;, and name some constructs you can use in Scala to leverage both.&lt;/li&gt;
+&lt;li&gt;What is the global ExecutionContext?
+
+&lt;ul&gt;
+&lt;li&gt;What does the global ExecutionContext underlay?&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Akka:
+
+&lt;ul&gt;
+&lt;li&gt;Which are the 3 main components in a Stream?&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;coding-questions:f1e7f679bd0c9d8278a47f4ac8c02912&#34;&gt;Coding Questions:&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;How can you make a &lt;code&gt;List[String]&lt;/code&gt; from a &lt;code&gt;List[List[String]]&lt;/code&gt;?&lt;/li&gt;
+&lt;li&gt;What is the difference (if any) between these 2 statements?
+&lt;code&gt;scala
+var x = immutable.Set[Int]()
+val y = mutable.Set[Int]()
+&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;fun-questions:f1e7f679bd0c9d8278a47f4ac8c02912&#34;&gt;Fun Questions:&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;What&amp;rsquo;s a cool project that you&amp;rsquo;ve recently worked on?&lt;/li&gt;
+&lt;li&gt;What testing framework for Scala do you use?&lt;/li&gt;
+&lt;li&gt;What do you know about property based testing frameworks, such as Scalacheck?&lt;/li&gt;
+&lt;li&gt;Do you like ‘scalaz‘?&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Scala best practices: 1 Hygienic Rule</title>
